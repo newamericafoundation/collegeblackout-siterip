@@ -1,0 +1,23 @@
+{
+  "name": "collegeblackout.org",
+  "version": "1.0.0",
+  "description": "siterip of former wordpress site",
+  "main": "index.html",
+  "scripts": {
+    "start": "./node_modules/http-server/bin/http-server",
+    "push": "aws s3 sync . s3://collegeblackout.org --exclude 'node_modules/*' --exclude '.git/*' --exclude '*.log' --exclude '.gitignore' --exclude 'package.json'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newamericafoundation/collegeblackout-siterip.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newamericafoundation/collegeblackout-siterip/issues"
+  },
+  "homepage": "https://github.com/newamericafoundation/collegeblackout-siterip#readme",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}
